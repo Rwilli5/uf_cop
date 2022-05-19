@@ -1,0 +1,18 @@
+% load lib to colorize text and hlines
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% force plots to show exactly where placed in the Rmd
+% ref: https://community.rstudio.com/t/cant-control-position-of-tables-and-figures-in-knitted-pdf-document/37364/3
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+
+\lstset{
+  breaklines=true
+}
