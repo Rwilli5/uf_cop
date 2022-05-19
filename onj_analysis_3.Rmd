@@ -39,7 +39,7 @@ library(haven)
 library(anytime)
 library(RColorBrewer)
 
-source('color_palettes.R')
+source('R/color_palettes.R')
 
 script_name <- "Vaccination Weekly Report"
 script_run_time <- with_tz(now(), tzone = Sys.getenv("TIME_ZONE"))
